@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+    
+        {
+            "type": "al",
+            "request": "launch",
+            "name": "TDCSERVER",
+            "server": "http://localhost",
+            "port": 7049,
+            "tenant": "",
+            "serverInstance": "NAV2018DEV1001",
+            "authentication": "Windows", 
+            "startupObjectId": 50101
+        }
+    ]
+}
