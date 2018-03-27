@@ -1,7 +1,7 @@
 table 50100 Reward
 {
-    DataClassification  = ToBeClassified;
-    LookupPageId        = "Reward List"; 
+    DataClassification = ToBeClassified;
+    
     fields
     {
         field(1;"Reward ID";Code[30])
@@ -10,7 +10,6 @@ table 50100 Reward
             
             trigger OnValidate();
             begin
-                
             end;
         }
          field(2;Description;Text[250])
@@ -35,21 +34,18 @@ table 50100 Reward
                 
             end;
         }
-        field(4;"No. Of Records";Integer)
+        field(4;"Minimum Purchase";Decimal)
         {
-            /*DataClassification = ToBeClassified;
-            NotBlank =true;
-            MinValue = 0;
-            MaxValue =100;
+                  
+            MinValue =0;
             DecimalPlaces =2;
-            */
-            FieldClass = FlowField;
-            CalcFormula = count(Reward);
-            Editable = false;
-            trigger OnValidate();
-            begin
-                
-            end;
+            
+        }
+         field(5;"Last Modified Date";Date)
+        {
+                  
+            Editable =false;
+            
         }
     }
 
@@ -66,10 +62,12 @@ table 50100 Reward
 
     trigger OnInsert();
     begin
+        SetLastModifiedDate;
     end;
 
     trigger OnModify();
     begin
+        SetLastModifiedDate;
     end;
 
     trigger OnDelete();
@@ -78,6 +76,11 @@ table 50100 Reward
 
     trigger OnRename();
     begin
+        SetLastModifiedDate;
+    end;
+local procedure SetLastModifiedDate();
+    begin
+        Rec."Last Modified Date" := Today();
     end;
 
 }
