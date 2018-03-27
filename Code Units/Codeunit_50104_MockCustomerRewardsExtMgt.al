@@ -1,5 +1,3 @@
-
-
 codeunit 50104 MockCustomerRewardsExtMgt 
 { 
     // When set to Manual subscribers in this codeunit are bound to an event by calling the BINDSUBSCRIPTION method.  
