@@ -34,13 +34,13 @@ table 50100 Reward
                 
             end;
         }
-        /*field(4;"Minimum Purchase";Decimal)
+        field(4;"Minimum Purchase";Decimal)
         {
                   
             MinValue =0;
             DecimalPlaces =2;
             
-        }*/
+        }
          field(5;"Last Modified Date";Date)
         {
                   
