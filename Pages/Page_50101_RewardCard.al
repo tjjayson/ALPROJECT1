@@ -21,10 +21,10 @@ page 50101 "Reward Card"
                 {
                 ApplicationArea = All;
                 }
-                field("Minimum Purchase";"Minimum Purchase")
+                /*field("Minimum Purchase";"Minimum Purchase")
                 {
                 ApplicationArea = All;
-                }
+                }*/
                 field("Last Modified Date";"Last Modified Date")
                 {
                 ApplicationArea = All;
